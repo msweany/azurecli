@@ -31,7 +31,7 @@ dos2unix privatelinkfile.csv
 #Copy/Paste the following code to skip the first line in the CSV, then grab each line and pass those variables to create the private link and add it to the privte DNS zone
 { 
 read
-while IFS=, read -r rg pename vnet subnet nic dest plinkname location destgroup zone zonegroup zonename
+while IFS=, read -r rg pename vnet subnet nic dest plinkname location destgroup zonename zonegroup zone
 do
   az network private-endpoint create -g $rg -n $pename --vnet-name $vnet --subnet $subnet --nic-name $nic --private-connection-resource-id $dest --connection-name $plinkname -l $location --group-id $destgroup
 	az network private-endpoint dns-zone-group create --endpoint-name $pename -g $rg -n $zonegroup --zone-name $zone --private-dns-zone $zonename
