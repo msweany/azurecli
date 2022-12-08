@@ -1,3 +1,9 @@
+This document will allow you to bulk provision private endpoints in Azure using Azure CLI by reading from a 
+CSV and inputting those variables into the appropriate az commands to provision the endpoint and attach it to the appropriate
+private DNS zone.
+
+This script comes with no guarantees or support, make sure you know what you are doing before you run this.
+
 Create a CSV file that has the following headers
 rg #resource group where the private endpoint will be deployed
 pename #Name of the private endpoint
