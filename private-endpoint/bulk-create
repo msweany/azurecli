@@ -25,7 +25,7 @@ az account show
 #change to the correct sub if neede
 az account set --subscription '<subscription id>'
 
-#if uploaded to Azure, make sure the CSV doesn't have an extra encoding
+#if uploaded to Azure, make sure the CSV doesn't have any extra encoding, this will make sure it's encoded correctly
 dos2unix privatelinkfile.csv
 
 #Copy/Paste the following code to skip the first line in the CSV, then grab each line and pass those variables to create the private link and add it to the privte DNS zone
